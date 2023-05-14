@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        div#fs{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
+            background-color: rgb(115, 170, 33);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="fs" onclick="clickOn()" onmouseenter="entrar()" onmouseleave="saiu()">
+        Interaja...
+    </div>
+    <p id="cl">Você clicou</p>
+    <script>
+        var a = window.document.getElementById('fs')
+        function clickOn(){
+            var s = window.document.getElementById('cl')
+            s.style.display = 'block'
+            a.style.backgroundColor = 'red'
+            a.innerText = 'Interagiu!'
+        }
+        function entrar(){
+            a.style.backgroundColor = 'blue'
+            a.innerText = 'Entrou!'
+        }
+        function saiu(){
+            a.style.backgroundColor = 'rgb(115, 170, 33)'
+            a.innerText = 'Interaja...'
+        }
+    </script>
+</body>
+</html>
