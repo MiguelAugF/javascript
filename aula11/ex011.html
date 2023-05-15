@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    Qual país você mora? <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="Ver()">
+    <div id="dd"></div>
+    <script>
+        function Ver(){
+            var txtpais = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#dd')
+            var txtv = String(txtpais.value)
+            if (txtv == 'Brasil', 'br', 'brasil', 'brazil'){
+                res.innerHTML = `Você mora no Brasil.Isso significa que você é Brasileiro!`
+            }else{
+                res.innerHTML = `Você mora em ${txtv}. Você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>

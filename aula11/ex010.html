@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="Clicou()">
+    <div>Resultado: <div id="res"></div></div>
+    <script>
+        function Clicou(){
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h</p>`
+            if(vel>60){
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong></p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+    </script>
+</body>
+</html>
